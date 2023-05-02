@@ -1,0 +1,26 @@
+<div>
+  <div class="example-box" cdkDrag>
+    I can be dragged anywhere
+  </div>
+
+  <div class="example-box" cdkDragLockAxis="x" cdkDrag>
+    I can only be dragged horizontally (x-axis)
+  </div>
+</div>
+
+<div class="box">
+  <cdk-virtual-scroll-viewport itemSize="50" orientation="horizontal" minBufferPx="200" maxBufferPx="400"
+    class="example-viewport">
+
+    <button cdkDrag style= "text-align:center;width:170px; margin-top:10px;padding:5px; font-weight: bold;">Drag here</button>
+      <p> I have a long scrollable content with handle
+      <div style="text-align:left; padding-left:10px;" *cdkVirtualFor="let item of items" class="example-item">{{item}}
+      </div>
+  </cdk-virtual-scroll-viewport>
+
+  <div class="example-box3">
+    <button style = "width:150px; padding:5px; margin-left:20px; margin-top : 10px; font-weight:bold; "> Can't be dragged </button>
+    <p style="text-align:center">Dragging here works </p>
+  </div>
+
+</div>
